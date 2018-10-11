@@ -1,0 +1,75 @@
+<div ngForm #inputValidation="ngForm">
+  <p>
+  input-validation works!
+</p>
+
+  <div class="group">
+    <input id="inputValidation"
+           type="text"
+           #inputValidation="ngModel"
+           [(ngModel)]='inputValidationValue'
+           appRestrictInput ="decimalOnly"
+           required
+           [ngClass]="{'validation-error':(inputValidation.errors && (inputValidation.dirty || inputValidation.touched))}"
+           name="inputValidation"
+           autocomplete="off">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>DecimalOnly</label>
+  </div>
+
+  <div class="group">
+    <input type="text" type="text"
+           appRestrictInput ="lettersOnly"
+           required
+           name="inputValidation"
+           autocomplete="off" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>lettersOnly</label>
+  </div>
+
+  <div class="group">
+    <input type="text" type="text"
+           appRestrictInput ="digitsOnly"
+           required
+           name="inputValidation"
+           autocomplete="off" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>digitsOnly</label>
+  </div>
+
+  <div class="group">
+    <input type="text" type="text"
+           appRestrictInput ="uppercaseLettersOnly"
+           required
+           name="inputValidation"
+           autocomplete="off" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>uppercaseLettersOnly</label>
+  </div>
+
+  <div class="group">
+    <input type="text" type="text"
+           appRestrictInput ="lettersAndDigitsOnly"
+           required
+           name="inputValidation"
+           autocomplete="off" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>lettersAndDigitsOnly</label>
+  </div>
+
+  <div class="group">
+    <input type="text" type="text"
+           appRestrictInput ="validPhoneCharsOnly"
+           required
+           name="inputValidation"
+           autocomplete="off" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>validPhoneCharsOnly</label>
+  </div>
+</div>
